@@ -82,11 +82,6 @@ class App extends Component {
 
       this.setState(state);
 
-      // GTM event
-      window.dataLayer.push({
-        event: 'ON_ADD_TO_CART',
-        item: pokemon
-      });
 
   }
 
@@ -100,13 +95,6 @@ class App extends Component {
   onCheckout = () => {
 
     let state = this.state;
-
-    // GTM event
-    window.dataLayer.push({
-      event: 'ON_CHECKOUT',
-      items: state.cart.items,
-      total: state.cart.total
-    });
 
   }
 
